@@ -106,7 +106,7 @@ class ClientController {
     async update({ request, response, params }) {
         try {
             const client_ = await Client.findOrFail(params.id)
-            client_.nom_complet = request.input('nom')
+            client_.nom_complet = request.input('nom_complet')
             client_.email = request.input('email')
             client_.tel = request.input('tel')
             client_.adresse = request.input('adresse')
