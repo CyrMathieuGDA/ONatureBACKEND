@@ -1,10 +1,10 @@
 'use strict'
 
 const Commande = use('App/Models/Commande')
-const ArticleCommande = use('App/Models/ArticleCommande')
-// const Client = use('App/Models/Client')
-// const mailjet = use('node-mailjet')
-//     .connect('88c4aac0a69ec905a64db5eb91328578', '6dec295c3ad9607abfddc4195e8e9c5d')
+// const ArticleCommande = use('App/Models/ArticleCommande')
+const Client = use('App/Models/Client')
+const mailjet = use('node-mailjet')
+    .connect('88c4aac0a69ec905a64db5eb91328578', '6dec295c3ad9607abfddc4195e8e9c5d')
 
 class CommandeController {
     /**
@@ -40,9 +40,9 @@ class CommandeController {
      *         description: une Erreur s'est produite lors de la creation de la commande, verifiez les erreurs
      */
     async store({ request, response }) {
-        const total = request.input('total_commande')
+        const total = request.input('total')
         const pay = request.input('mode_paiement')
-        const client = request.input('id_client')
+        const client = request.input('client')
         const stat = request.input('status')
         const articles_ = request.input('articles')
         const client_ = await Client.findOrFail(client)
@@ -55,8 +55,8 @@ class CommandeController {
                     "Name": "O'Nature Info"
                 },
                 "To": [{
-                    "Email": client_.$attributes.email_client,
-                    "Name": client_.$attributes.prenom_nom_client
+                    "Email": client_.$attributes.email,
+                    "Name": client_.$attributes.nom_complet
                 },
                 {
                     "Email": "contact@onaturesn.com",

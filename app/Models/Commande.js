@@ -15,7 +15,7 @@ class Commande extends Model {
      *              items:
      *                  type: object
      *                  properties:
-     *                      id_article:
+     *                      article:
      *                          type: integer
      *                      quantite:
      *                          type: integer
