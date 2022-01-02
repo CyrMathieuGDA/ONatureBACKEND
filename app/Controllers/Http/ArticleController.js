@@ -95,7 +95,7 @@ class ArticleController {
      *           in: body
      *           required: true
      *           schema:
-     *              $ref: "#/definitions/Article"
+     *              $ref: "#/definitions/ArticleModif"
      *     responses:
      *       202:
      *         description: Article mis a jour avec succès
