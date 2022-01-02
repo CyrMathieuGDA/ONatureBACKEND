@@ -1,7 +1,5 @@
 'use strict'
 const Article = use('App/Models/Article')
-const Collection = use('App/Models/Collection')
-const ArticleCollection = use('App/Models/ArticleCollection')
 
 class ArticleController {
     /**
