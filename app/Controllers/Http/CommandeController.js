@@ -134,44 +134,6 @@ class CommandeController {
         }
     }
 
-    /*
-    /**
-     * @swagger
-     * /commande/info/{id}:
-     *   get:
-     *     tags:
-     *       - API commande
-     *     summary: renvois plus d'info sur une commande
-     *     parameters:
-     *         - name: id
-     *           desciption: identifiant
-     *           in: path
-     *           schema:
-     *              type: number
-     *     responses:
-     *       200:
-     *         description: More info
-     *       400:
-     *         description: Aucun resultat
-     */
-    /*async showQuantityArticlesOrdered({ response, params }) {
-        try {
-            const commande_ = await Commande.findOrFail(params.id)
-            let reg = new RegExp("[{: }]+", "g"),
-                j = 0,
-                table = commande_.$attributes.articles.split(reg),
-                tab = []
-            for (let i = 1; i < table.length - 2; i += 2) {
-                let quantite_article_commande = new QuantiteArticleCommande(parseInt(table[i]), parseInt(table[i + 1]))
-                tab[j++] = quantite_article_commande
-            }
-            return 'hey bitches!!!'
-        } catch (error) {
-            console.log(error)
-            return response.status(500).send(error)
-        }
-    }*/
-
     /**
      * @swagger
      * /commande/{id}:
