@@ -19,7 +19,7 @@ const Route = use('Route')
 Route.on('/').render('welcome')
 
 Route.resource('/article', 'ArticleController').apiOnly()
-Route.resource('/article_commande', 'ArtileCommandeController').apiOnly()
+Route.resource('/article_commande', 'ArticleCommandeController').apiOnly()
 Route.resource('/categorie', 'CategorieController').apiOnly()
 Route.resource('/client', 'ClientController').apiOnly()
 Route.resource('/commande', 'CommandeController').apiOnly()
