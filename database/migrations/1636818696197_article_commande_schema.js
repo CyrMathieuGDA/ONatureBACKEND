@@ -5,6 +5,7 @@ const Schema = use('Schema')
 
 class ArticleCommandeSchema extends Schema {
     up() {
+        this.drop('article_commandes')
         this.create('article_commandes', (table) => {
             table.increments()
             table.integer('article').unsigned().notNullable()

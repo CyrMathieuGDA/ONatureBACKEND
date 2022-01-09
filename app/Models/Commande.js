@@ -20,7 +20,7 @@ class Commande extends Model {
      *                      quantite:
      *                          type: integer
      *                  required:
-     *                      - id
+     *                      - article
      *                      - quantite
      *          total:
      *              type: number

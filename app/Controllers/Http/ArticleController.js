@@ -41,7 +41,8 @@ class ArticleController {
                     prix: request.input('prix'),
                     url_img: request.input('url_img'),
                     description: request.input('description'),
-                    categorie: request.input('categorie')
+                    categorie: request.input('categorie'),
+                    variete: request.input('variete')
                 })
             return response.status(201).json(article_)
         } catch (error) {
@@ -110,6 +111,7 @@ class ArticleController {
             article_.url_img = request.input('url_img')
             article_.description = request.input('description')
             article_.categorie = request.input('categorie')
+            article_.variete = request.input('variete')
             article_.stock = request.input('stock')
             article_.promo = request.input('promo')
             article_.prix_promo = request.input('prix_promo')

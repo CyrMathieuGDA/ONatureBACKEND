@@ -20,6 +20,8 @@ class Article extends Model {
      *              type: string
      *          categorie:
      *              type: number
+     *          variete:
+     *              type: number
      */
     
     /**
@@ -37,6 +39,8 @@ class Article extends Model {
      *          description:
      *              type: string
      *          categorie:
+     *              type: number
+     *          variete:
      *              type: number
      *          stock:
      *              type: boolean
@@ -57,6 +61,8 @@ class Article extends Model {
     description = String()
 
     categorie = Number()
+
+    variete = Number()
 
     stock = Boolean()
     

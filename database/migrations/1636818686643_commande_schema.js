@@ -5,6 +5,7 @@ const Schema = use('Schema')
 
 class CommandeSchema extends Schema {
     up() {
+        this.drop('commandes')
         this.create('commandes', (table) => {
             table.increments().primary()
             table.timestamps()
